@@ -191,6 +191,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 }
 
                 finish();
+                Toast.makeText(getApplicationContext(), "The place has been successfully added!",
+                        Toast.LENGTH_LONG).show();
             }
         });
 
@@ -375,6 +377,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                     mMap.addMarker(new MarkerOptions().position(new LatLng(lat, lng)).draggable(true)
                             .title(addressList.get(0).getLocality()));
                     updateData(addressList, new LatLng(lat, lng));
+
                 }
 
             }
@@ -393,9 +396,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         // Create the object of AlertDialog Builder class
         AlertDialog.Builder builder = new AlertDialog.Builder(MapsActivity.this);
 
-//                    // Set the message show for the Alert time
-//                    builder.setMessage("Do you want to save this address?");
-
         // Set Alert Title
         builder.setTitle("Do you want to update this address?");
 
@@ -407,14 +407,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 if (addressToSave != null && addressToSave.size() > 0) {
-//                    favPlacesDB.favPlacesDao().insert(
-//                            new FavPlacesEntity(
-//                                    addressToSave.get(0).getLocality(),
-//                                    getCurrentDate(),
-//                                    latLng.latitude,
-//                                    latLng.longitude
-//                            )
-//                    );
                     favPlacesDB.favPlacesDao().update(id, addressToSave.get(0).getLocality(),
                             getCurrentDate(),
                             latLng.latitude,

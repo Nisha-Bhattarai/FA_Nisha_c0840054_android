@@ -94,54 +94,6 @@ public class FavPlaceActivity extends AppCompatActivity implements View.OnClickL
         loadData();
     }
 
-//    @Override
-//    public void onItemSwipe(FavPlacesModel favPlacesModel) {
-//        // TODO show dialog with edit delete button
-//        AlertDialog.Builder builder = new AlertDialog.Builder(FavPlaceActivity.this);
-//
-//        // Set the message show for the Alert time
-//        //builder.setMessage("Do you want to save ?");
-//
-//        // Set Alert Title
-//        builder.setTitle("Edit or Delete");
-//
-//        // Set Cancelable false for when the user clicks on the outside the Dialog Box then it will remain show
-//        builder.setCancelable(false);
-//
-//        // Set the positive button with yes name OnClickListener method is use of DialogInterface interface.
-//        builder.setPositiveButton("Edit", new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialog, int which) {
-//                finish();
-//            }
-//        });
-//
-//        // Set the Negative button OnClickListener method is use of DialogInterface interface.
-//        builder.setNegativeButton("Delete", new DialogInterface.OnClickListener() {
-//
-//            @Override
-//            public void onClick(DialogInterface dialog,
-//                                int which)
-//            {
-//
-//                // If user click no
-//                // then dialog box is canceled.
-//                dialog.cancel();
-//            }
-//        });
-//
-//        // Create the Alert dialog
-//        AlertDialog alertDialog = builder.create();
-//
-//        // Show the Alert Dialog box
-//        alertDialog.show();
-//
-//    }
-
-    //deleting product on swipe
-
-//}
-
 
     @Override
     public void onItemClicked(FavPlacesModel favPlacesModel) {

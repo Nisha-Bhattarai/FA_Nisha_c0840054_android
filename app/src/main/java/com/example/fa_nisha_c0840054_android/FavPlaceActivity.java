@@ -15,6 +15,7 @@ import android.graphics.RectF;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.fa_nisha_c0840054_android.Adapter.FavPlaceAdapter;
 import com.example.fa_nisha_c0840054_android.Room.FavPlacesDB;
@@ -57,7 +58,8 @@ public class FavPlaceActivity extends AppCompatActivity implements View.OnClickL
                 favPlacesDB.favPlacesDao().deleteById(fav.getId());
                 favPlaces.remove(fav);
                 adapter.notifyItemRemoved(index);
-
+                Toast.makeText(getApplicationContext(), fav.getAddress() + " was deleted from your fav places list!",
+                        Toast.LENGTH_LONG).show();
             }
         };
         ItemTouchHelper itHelper = new ItemTouchHelper(ithFav);

@@ -419,6 +419,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 }
 
                 finish();
+                Toast.makeText(getApplicationContext(), "The place has been successfully updated!",
+                        Toast.LENGTH_LONG).show();
             }
         });
 

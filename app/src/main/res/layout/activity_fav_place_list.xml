@@ -12,20 +12,23 @@
         android:id="@+id/favPlacesTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="FAVOURITE PLACES"
+        android:text="Favourite Places"
         android:textStyle="bold"
-        android:textColor="@android:color/black"
+        android:textColor="@color/mint_green"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
         android:layout_marginTop="16dp"
-        android:textSize="32dp"/>
+        android:layout_centerHorizontal="true"
+        android:textSize="32dp"
+        android:fontFamily="monospace"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/favPlacesRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/favPlacesTV"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:nestedScrollingEnabled="true"/>
+        android:nestedScrollingEnabled="true"
+        android:fontFamily="monospace"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addButton"

@@ -32,6 +32,7 @@ public class FavPlaceActivity extends AppCompatActivity implements View.OnClickL
     private FavPlacesDB favPlacesDB;
     List<FavPlacesModel> favPlaces = new ArrayList<>();
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -100,4 +101,5 @@ public class FavPlaceActivity extends AppCompatActivity implements View.OnClickL
         startActivity(MapsActivity.getNewIntent(this, favPlacesModel.getLatitude(), favPlacesModel.getLongitude(), favPlacesModel.getAddress(), favPlacesModel
                 .getDate(), favPlacesModel.getId()));
     }
+
 }
